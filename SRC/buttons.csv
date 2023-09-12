@@ -1,0 +1,9 @@
+Label,ID
+<-,previous
+<<-,backplay
+||,pause
+->>,fastforward
+->,next
+vol+,volup
+vol-,voldn
+mute/unmute,mute
