@@ -32,6 +32,7 @@ const prevtrack=require("./MODULES/prevtrack.js")
 const fastfrwrd=require("./MODULES/fastfrwrd.js")
 const backplay=require("./MODULES/backplay.js")
 const mute=require("./MODULES/mute.js")
+const mousecontroler=require("./MODULES/mousecntrl.js")
 
 client.on("ready", (c) => {
   console.log(`✅ ${c.user.tag} is online.`);
@@ -49,8 +50,11 @@ client.on("interactionCreate", async (interaction) => {
       
       
       interaction.deferUpdate()
+      if(interaction.customId.includes('mce')){
+        mousecontroler(interaction)
+      }
       
-      
+
       
       if (interaction.customId === "backplay") {
         backplay(interaction);
@@ -71,13 +75,7 @@ client.on("interactionCreate", async (interaction) => {
       }
         
       
-         else {
-            interaction.editReply({
-                content: "Unknown Interaction Took Place on Interaction Id::"+interaction.customId,
-                
-              });
-        
-      }
+   
       
      
       

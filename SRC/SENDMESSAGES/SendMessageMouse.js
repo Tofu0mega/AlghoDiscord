@@ -11,7 +11,7 @@ const {
   ButtonBuilder,
   ButtonStyle,
 } = require('discord.js');
-const TRACK_ID=process.env.MEDIACHANNELID
+const TRACK_ID=process.env.MOUSECHANNELID
 
 function readCSVAndPopulateArrays(filePath) {
   fs.createReadStream(filePath)
@@ -34,7 +34,7 @@ function readCSVAndPopulateArrays(filePath) {
       
     });
 }
-readCSVAndPopulateArrays('SRC/CSV/mediacontrolbuttons.csv')
+readCSVAndPopulateArrays('SRC/CSV/mousecontrolbuttons.csv')
 const client = new Client({
   intents: [
     IntentsBitField.Flags.Guilds,
@@ -76,7 +76,7 @@ client.on('ready', async (c) => {
       rowlist.push(row[l])
     }
     await channel.send({
-      content: 'MediaControls',
+      content: 'MouseControls',
       components: rowlist
     });
     process.exit();
