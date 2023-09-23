@@ -70,7 +70,8 @@ client.on("interactionCreate", async (interaction) => {
         volumeup(interaction);
       } else if (interaction.customId === "voldn") {
         volumedown(interaction);
-      }else if (interaction.customId==="mute"){
+      }
+      else if (interaction.customId==="mute"){
         mute(interaction)
       }
         

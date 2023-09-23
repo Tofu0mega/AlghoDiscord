@@ -13,7 +13,7 @@ const {
   } = require("discord.js");
 module.exports = async (interaction) => {
     var mouse= robot.getMousePos();
-    var smallval=10;
+    var smallval=25;
     var largeval=150;
     robot.setMouseDelay(0)
 
