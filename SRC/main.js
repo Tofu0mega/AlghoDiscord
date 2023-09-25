@@ -33,6 +33,7 @@ const fastfrwrd=require("./MODULES/fastfrwrd.js")
 const backplay=require("./MODULES/backplay.js")
 const mute=require("./MODULES/mute.js")
 const mousecontroler=require("./MODULES/mousecntrl.js")
+const typetoserver=require("./MODULES/typetoserver.js")
 
 client.on("ready", (c) => {
   console.log(`✅ ${c.user.tag} is online.`);
@@ -42,6 +43,11 @@ client.on("ready", (c) => {
 
 client.on("interactionCreate", async (interaction) => {
     try {
+      if (interaction.commandName==='type'){
+        typetoserver(interaction)
+        return;
+
+      }
       
      
       
