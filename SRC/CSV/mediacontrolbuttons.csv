@@ -6,4 +6,6 @@ Label,ID
 ->,next
 vol+,volup
 vol-,voldn
++x,+playback
+-x,-playback
 mute/unmute,mute

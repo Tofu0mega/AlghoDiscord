@@ -29,11 +29,13 @@ const volumedown=require("./MODULES/volumedown.js")
 const pauseplay=require("./MODULES/pauseplay.js")
 const nexttrack=require("./MODULES/nexttrack.js")
 const prevtrack=require("./MODULES/prevtrack.js")
-const fastfrwrd=require("./MODULES/fastfrwrd.js")
-const backplay=require("./MODULES/backplay.js")
+const plusplayback=require("./MODULES/plusplayback.js")
+const minusplayback=require("./MODULES/minusplayback.js")
 const mute=require("./MODULES/mute.js")
 const mousecontroler=require("./MODULES/mousecntrl.js")
 const typetoserver=require("./MODULES/typetoserver.js")
+const fastfrwrd=require("./MODULES/fastfrward.js")
+const backplay=require("./MODULES/backplay.js")
 
 client.on("ready", (c) => {
   console.log(`✅ ${c.user.tag} is online.`);
@@ -64,6 +66,7 @@ client.on("interactionCreate", async (interaction) => {
       
       if (interaction.customId === "backplay") {
         backplay(interaction);
+      
       } else if (interaction.customId === "previous") {
         prevtrack(interaction);
       } else if (interaction.customId === "pause") {
@@ -79,6 +82,13 @@ client.on("interactionCreate", async (interaction) => {
       }
       else if (interaction.customId==="mute"){
         mute(interaction)
+      }else if (interaction.customId==="+playback"){
+        plusplayback(interaction)
+
+      }
+      else if (interaction.customId==="-playback"){
+        minusplayback(interaction);
+        
       }
         
       
