@@ -12,7 +12,8 @@ const {
     EmbedBuilder
   } = require("discord.js");
 module.exports = async (interaction) => {
-  robot.keyTap('right')
+    robot.keyTap('right')
+    robot.keyTap('right')
  
    
 

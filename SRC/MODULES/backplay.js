@@ -13,6 +13,7 @@ const {
   } = require("discord.js");
 module.exports = async (interaction) => {
   robot.keyTap('left')
+  robot.keyTap('left')
  
    
 
